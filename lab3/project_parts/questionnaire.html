@@ -6,6 +6,171 @@
     <title>Web technologies practice: basic HTML forms</title>
 </head>
 <body>
-    
+    <fieldset>
+        <legend>Форма для заповнення</legend>
+
+        <form action="/form-results/form-submit.html" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Особисті дані</legend>
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" tabindex="1" required placeholder="Введіть ім'я">
+
+            <br><br>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" tabindex="2" maxlength="6" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}$" placeholder="Введіть пароль">
+            <button type="button" onclick="togglePasswordVisibility()">Показати</button>
+
+            <br><br>
+
+            <label for="date">День народження:</label>
+            <input type="date" name="birthday" id="date" tabindex="3" required placeholder="Введіть свою дату народження">
+
+            <br><br>
+
+            <label for="photo">Завантажити своє фото:</label>
+            <input type="file" name="photo" id="photo" accept="audio/*" multiple>
+
+            <br><br>
+
+            <label for="about">Додаткова інформація:</label><br>
+            <textarea name="about" tabindex="4" id="about"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Контакти</legend>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" tabindex="5" autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Введіть email">
+
+            <br><br>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" tabindex="6" required pattern="\+?\d{1,3}?[- .]?\(\d{3}\)?[- .]?\d{3}[- .]?\d{4}" placeholder="Введіть телефон">
+        </fieldset>
+
+        <fieldset>
+            <legend>Налаштування</legend>
+
+            <div>
+                <label for="continent">Континент:</label>
+                <select name="continent" id="continent">
+                    <option value="ua">Африка</option>
+                    <option value="us">Азія</option>
+                    <option value="ru" selected>Європа</option>
+                    <option value="de">Північна Америка</option>
+                    <option value="fr">Південна Америка</option>
+                </select>
+            </div>
+
+            <br><br>
+
+            <div>
+                <label for="language">Знання мов:</label>
+                <select name="language" id="language" multiple size="10" required>
+                    <option value="ukrainian">Українська</option>
+                    <option value="russian">Російська</option>
+                    <option value="italian">Італійська</option>
+                    <option value="polish">Польська</option>
+                    <option value="english">Англійська</option>
+                    <option value="german">Німецька</option>
+                </select>
+            </div>
+
+            <br><br>
+
+            <div>
+                <label for="country">Громадянство: </label>
+                <select name="countries" required>
+                    <optgroup label="Європа">
+                        <option value="italy">Італія</option>
+                        <option value="poland">Польща</option>
+                    </optgroup>
+                    <optgroup label="Дім">
+                        <option value="ukraine" selected>Україна</option>
+                    </optgroup>
+                    <optgroup label="Америка">
+                        <option value="usa">США</option>
+                        <option value="canada">Канада</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <br><br>
+
+            <div>
+                <input list="countries" id="countryInput" placeholder="Введіть країну">
+                <datalist id="countries">
+                    <option value="Україна">
+                    <option value="США">
+                    <option value="Канада">
+                    <option value="Німеччина">
+                </datalist>
+            </div>
+
+            <br><br>
+
+            <div>
+                <label for="country">Національність:</label>
+                <div>
+                    <input type="radio" name="ukrainian" value="ukraine">
+                    <label for="ukrainian">Ukrainian</label>
+                </div>
+                <div>
+                    <input type="radio" name="polish" value="ukraine">
+                    <label for="ukrainian">Polish</label>
+                </div>
+                <div>
+                    <input type="radio" name="german" value="ukraine">
+                    <label for="ukrainian">German</label>
+                </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div>
+                <label for="age">Вік:</label>
+                <div>
+                    <input type="radio" name="young" id="young" checked>
+                    <label for="age">Молодше 18 років</label>
+                </div>
+                <div>
+                    <input type="radio" name="good" id="good">
+                    <label for="age">Від 18 до 25 років</label>
+                </div>
+                <div>
+                    <input type="radio" name="old" id="old">
+                    <label for="age">Старше 25 років</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <br>
+
+        <input type="checkbox" tabindex="7" name="confirm" id="confirm">
+        <label for="comfirm">Підписатись на розсилку по пошті</label>
+        
+        <br><br>
+
+        <button tabindex="8" type="submit">Відправити</button>
+        <button tabindex="9" type="reset">Очистити</button>
+    </form>
+    </fieldset>
+
+    <br><br><br><br><br><br>
+
+    <h2><a href="/index.html">Повернутися на головну</a></h2>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+
+            // Зміна тексту на кнопці
+            const buttonText = document.querySelector('button');
+            buttonText.textContent = type === 'password' ? 'Показати' : 'Приховати';
+        }
+    </script>
 </body>
 </html>
