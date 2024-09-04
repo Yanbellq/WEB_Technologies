@@ -1,0 +1,26 @@
+li {
+    list-style-type: none;
+}
+li::before {
+    content: "*";
+    font-size: 25px;
+    padding-right: .5em;
+}
+.week-type {
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+    writing-mode: vertical-rl;
+}
+.bg-color-yellow {
+    background: #FFFF00;
+}
+.bg-color-grey {
+    background: #D9D9D9;
+}
+.bg-color-light_grey {
+    background: #EBF1DE;
+}
+.bg-color-orange {
+    background: #F79646;
+}
