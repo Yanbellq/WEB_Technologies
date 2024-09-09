@@ -20,7 +20,7 @@
     text-shadow: 5px -5px 3px var(--shadow-color);
 }
 
-.second {
+#second-p {
     font-weight: bold;
     font-style: italic;
 }
