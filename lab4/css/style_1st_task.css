@@ -43,18 +43,19 @@
 }
 
 .nav-item {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .nav-link {
     text-decoration: none;
     color: black;
     word-spacing: normal;
-    font-size: 30px;
+    font-size: 20px;
     border: 2px solid black;
     padding: 10px;
     border-radius: 10px;
     background: rgb(230, 230, 230);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .nav-item:hover {
