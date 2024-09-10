@@ -2,55 +2,53 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-main {
-    font-size: 20px;
-}
-
-.list-header {
-    color: green;
+p.text-background > span {
     text-decoration: underline;
+    font-style: italic;
     font-weight: bold;
 }
 
-
-.food-item:first-of-type > ul > li {
-    list-style: none;
+div > p.text-background > span {
+    background-color: yellow;
 }
 
-.fruits-list {
-    margin: 0 0 20px 0;
+span span {
+    background-color: gray;
+    text-decoration: line-through;
 }
 
-.fruits-link {
-    color: purple;
-    margin: 5px 0;
-    text-decoration: underline;
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
-.vegetables-list {
+section > p {
+    text-shadow: 3px 3px 5px maroon;
+    text-indent: 50px;
+}
+
+li ul {
     list-style: url(/img/li.svg);
-    margin: 0 0 20px 0;;
 }
 
-.vegetables-link {
-    color: purple;
-    margin: 5px 0;
-    text-decoration: underline;
+div > p.text-background {
+    word-spacing: 50px;
 }
 
-.berries-list {
-    list-style: square;
-    margin: 0 0 20px 0;;
+.text-bold > p {
+    font-weight: bold;
 }
 
-.berries-link {
-    color: purple;
-    margin: 5px 0;
-    text-decoration: none;
+.text-bold > section > p {
+    line-height: 45px;
 }
 
-.other-list-header {
-    margin: 0;
+img + p {
+    background-color: brown;
+}
+
+section ~ p {
+    color: red;
 }
 
 .nav-list {
