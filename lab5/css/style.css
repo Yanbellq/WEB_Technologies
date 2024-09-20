@@ -140,7 +140,7 @@ body {
 
 .rule {
     background-image: url('/img/rule.svg');
-    background-position: 0 10px;
+    background-position: 3px 5px;
     background-repeat: no-repeat;
     background-size: 40px 40px;
     padding: 0 40px 0px;
@@ -259,3 +259,142 @@ body {
 }
 
 /* Task - 2 */
+
+.main2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 107px);
+}
+
+table {
+    font-weight: 500;
+}
+
+td {
+    width: 200px;
+    height: 100px;
+    margin: 0 5px 5px 0;
+    font-size: 20px;
+}
+
+td span {
+    display: grid;
+    justify-content: center;
+}
+
+tr:nth-of-type(1) td:first-child{
+    color: white;
+    padding: 10px;
+    margin: 0 5px 5px 0;
+    background-color: #f2dbdb;
+}
+
+tr:nth-of-type(1) td:nth-child(2) {
+    color: white;
+    padding: 10px;
+    margin: 0 5px 5px 0;
+    background-color: #e5b8b7;
+}
+
+tr:nth-of-type(1) td:nth-child(3) {
+    color: white;
+    padding: 10px;
+    margin: 0 5px 5px 0;
+    background-color: #d99594;
+}
+
+tr:nth-of-type(1) td:nth-child(4) {
+    color: white;
+    padding: 10px;
+    margin: 0 5px 5px 0;
+    background-color: #943634;
+}
+
+tr:nth-of-type(1) td:nth-child(5) {
+    color: white;
+    padding: 10px;
+    margin: 0 5px 5px 0;
+    background-color: #632423;
+}
+
+td:nth-of-type(1) {
+    color: white;
+    background-color: #c0504d;
+}
+
+tr:nth-of-type(2) td:nth-child(2),
+tr:nth-of-type(2) td:nth-child(3),
+tr:nth-of-type(2) td:nth-child(4),
+tr:nth-of-type(2) td:nth-child(5),
+tr:nth-of-type(4) td:nth-child(2),
+tr:nth-of-type(4) td:nth-child(3),
+tr:nth-of-type(4) td:nth-child(4),
+tr:nth-of-type(4) td:nth-child(5),
+tr:nth-of-type(6) td:nth-child(2),
+tr:nth-of-type(6) td:nth-child(3),
+tr:nth-of-type(6) td:nth-child(4),
+tr:nth-of-type(6) td:nth-child(5) {
+    background-color: #e5b8b7;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+tr:nth-of-type(3) td:nth-child(2),
+tr:nth-of-type(3) td:nth-child(3),
+tr:nth-of-type(3) td:nth-child(4),
+tr:nth-of-type(3) td:nth-child(5),
+tr:nth-of-type(5) td:nth-child(2),
+tr:nth-of-type(5) td:nth-child(3),
+tr:nth-of-type(5) td:nth-child(4),
+tr:nth-of-type(5) td:nth-child(5) {
+    background-color: #f2dbdb;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+/* Task - 3 */
+.main3 {
+    background-color: #e5b8b7;
+    padding: 50px;
+}
+
+.form {
+    display: grid;
+    justify-content: center;
+    color: white;
+}
+
+.main-fieldset {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    background-color: #2F303A;
+}
+
+.main-legend {
+    text-align: center;
+    font-size: 22px;
+}
+
+.data-fieldset {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.data-fieldset:first-of-type {
+    background: #2196F3;
+}
+
+.data-fieldset:nth-of-type(2) {
+    background: #d99594;
+}
+
+.data-fieldset:last-of-type {
+    background: #943634;
+}
+
+
+.data-fieldset * {
+    margin: 5px;
+}
