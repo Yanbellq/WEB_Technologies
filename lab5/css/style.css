@@ -323,34 +323,16 @@ td:nth-of-type(1) {
     background-color: #c0504d;
 }
 
-tr:nth-of-type(2) td:nth-child(2),
-tr:nth-of-type(2) td:nth-child(3),
-tr:nth-of-type(2) td:nth-child(4),
-tr:nth-of-type(2) td:nth-child(5),
-tr:nth-of-type(4) td:nth-child(2),
-tr:nth-of-type(4) td:nth-child(3),
-tr:nth-of-type(4) td:nth-child(4),
-tr:nth-of-type(4) td:nth-child(5),
-tr:nth-of-type(6) td:nth-child(2),
-tr:nth-of-type(6) td:nth-child(3),
-tr:nth-of-type(6) td:nth-child(4),
-tr:nth-of-type(6) td:nth-child(5) {
+tr:nth-of-type(even) {
     background-color: #e5b8b7;
     font-size: 35px;
     font-weight: 400;
 }
 
-tr:nth-of-type(3) td:nth-child(2),
-tr:nth-of-type(3) td:nth-child(3),
-tr:nth-of-type(3) td:nth-child(4),
-tr:nth-of-type(3) td:nth-child(5),
-tr:nth-of-type(5) td:nth-child(2),
-tr:nth-of-type(5) td:nth-child(3),
-tr:nth-of-type(5) td:nth-child(4),
-tr:nth-of-type(5) td:nth-child(5) {
+tr:nth-of-type(odd) {
     background-color: #f2dbdb;
     font-size: 35px;
-    font-weight: 400;
+    font-weight: 400;   
 }
 
 /* Task - 3 */
