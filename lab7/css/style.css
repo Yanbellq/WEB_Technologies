@@ -180,11 +180,12 @@ body {
     display: none;
 }
 
-#block1:hover+#block2 {
+#block1:hover + #block2 {
     display: block;
 }
 
-#block2:hover+#block3 {
+#block2:hover + #block3,
+#block2:hover {
     display: block;
 }
 
@@ -201,3 +202,6 @@ body {
     margin-top: 20px;
     background-color: #000f9f;
 }
+
+
+/* Task - 3 */
