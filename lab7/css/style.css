@@ -126,9 +126,6 @@ body {
 .container {
     width: 1140px;
     margin: 100px auto;
-    /* display: grid;
-    justify-content: center;
-    align-items: center; */
     height: calc(75vh - 1px);
     position: relative;
     font-size: 10px;
@@ -159,4 +156,48 @@ body {
     left: 600px;
     border: #2F303A solid 3px;
     background-color: #000fff;
+}
+
+
+/* Task - 2 */
+.container-1 {
+    width: 1140px;
+    margin: 100px auto;
+    height: calc(75vh - 1px);
+    display: grid; 
+    justify-content: center;
+}
+
+.block {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#block2,
+#block3 {
+    display: none;
+}
+
+#block1:hover+#block2 {
+    display: block;
+}
+
+#block2:hover+#block3 {
+    display: block;
+}
+
+.block-4 {
+    background-color: lightblue;
+}
+
+.block-5 {
+    margin-top: -55px;
+    background-color: #000fff;
+}
+
+.block-6 {
+    margin-top: 20px;
+    background-color: #000f9f;
 }
