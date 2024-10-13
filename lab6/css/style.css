@@ -1,0 +1,427 @@
+body {
+    font-family: "Raleway", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+}
+
+.nav {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+
+/* Logo */
+.logo {
+    font-weight: 900;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-left: 100px;
+    padding: 0;
+}
+
+.logo:hover {
+    transition: .2s;
+    color: #2196F3;
+}
+
+.logo>span {
+    font-weight: 900;
+}
+
+.col-blue {
+    color: #2196F3;
+}
+
+
+/* Navigation */
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    margin-right: 100px;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    transition: .2s;
+    color: #2196F3;
+}
+
+.active {
+    color: #2196F3;
+}
+
+
+/* Support */
+.supp-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+    margin-right: 80px;
+    list-style: none;
+}
+
+.supp-link {
+    text-decoration: none;
+    color: black;
+}
+
+.supp-link:hover {
+    transition: .2s;
+    color: #2196F3;
+}
+
+
+/* Main */
+.main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: calc(94vh - 1px);
+    background-color: #2F303A;
+}
+
+.global-info {
+    color: white;
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+
+/* Task - 1 */
+.container {
+    height: calc(73vh - 1px);
+}
+
+.col {
+    margin: 200px auto;
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 5px dotted red;
+    width: 1140px;
+}
+
+.col p {
+    height: 100%;
+}
+
+.photo-right {
+    float: right;
+    margin: 10px 0 0 10px;
+}
+
+.photo-left {
+    float: left;
+    margin: 10px 10px 0 0;
+}
+
+
+/* Task - 2 */
+.container-1 {
+    width: 1140px;
+    margin: 100px auto;
+    height: calc(100vh - 1px);
+}
+
+.container-1 > div {
+    width: 300px;
+
+    display: inline-block;
+    vertical-align: top;
+    
+    margin: 10px;
+    padding: 10px;
+}
+
+.block-1,
+.block-2,
+.block-3,
+.block-4,
+.block-5,
+.block-6,
+.block-7,
+.block-8,
+.block-9,
+.block-10,
+.block-11,
+.block-12 {
+    display: inline-block;
+    width: 300px;
+    margin: 5px;
+    padding: 5px;
+    text-align: justify;
+}
+
+.block-1 {
+    border: 3px solid #228B22;
+    border-radius: 30px;
+}
+
+.block-2 {
+    border: 3px solid #228B22;
+    border-radius: 70px 0 70px 0;
+}
+
+.block-3 {
+    border: 3px solid #228B22;
+    border-radius: 30px 150px 30px 150px;
+}
+
+.block-4 {
+    border: 10px solid;
+    border-color: #228B22 #00FF00;
+    border-radius: 130px/30px;
+}
+
+.block-5 {
+    border: 10px solid;
+    border-color: #00FF00 #228B22;
+    border-top-left-radius: 100% 50px;
+    border-bottom-right-radius: 100% 50px;
+}
+
+.block-6 {
+    border: 10px solid;
+    border-color: #00FF00 #00FF00 #00FF00 #228B22;
+    border-radius: 0 0 100% 0;
+}
+
+.block-7 {
+    border: 16px double #FFA500;
+    border-image: url(..//img/border-image-1.png) 27 stretch stretch;
+}
+
+.block-8 {
+    border: 16px double #FFA500;
+    border-image: url(..//img/border-image-1.png) 17 round round;
+}
+
+.block-9 {
+    border: 10px solid transparent;
+    border-image: url(..//img/border-image-1.png) 30 space;
+}
+
+.block-10 {
+    border: 10px solid red;
+    border-radius: 200px/20px;
+}
+
+.block-11 {
+    border: 10px solid transparent;
+    border-image: url(..//img/red-circle.png) 30 space;
+}
+
+.block-12 {
+    border: 10px solid;
+    border-image: url(..//img/red-circle.png) 30;
+    border-radius: 300px/300px;
+}
+
+
+/* Task - 3 */
+.container-2 {
+    width: 1140px;
+    margin: 100px auto;
+    height: calc(75vh - 1px);
+}
+
+.block-13,
+.block-14 {
+    border: none;
+    border-radius: 50px;
+    margin: 5px;
+    color: white;
+    padding: 10px;
+    text-align: justify;
+}
+
+.block-13 h2,
+.block-14 h2 {
+    text-align: center;
+}
+
+.block-13 {
+    background-color: #8B0000;
+}
+
+.block-14 {
+    background-color: #CD5C5C;
+}
+
+.block-15,
+.block-16 {
+    background-color: red;
+    width: 40%;
+    border: none;
+    border-radius: 50px;
+    margin: 25px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.block-15 {
+    float: left;
+}
+
+.block-16 {
+    float: right;
+}
+
+.text-both {
+    clear: both;
+}
+
+
+/* Task - 4 */
+.block-17,
+.block-18,
+.block-19,
+.block-20,
+.block-21,
+.block-22 {
+    width: 250px;
+    height: 300px;
+    border: 1px solid green;
+    margin: 50px;
+    float: left;
+}
+
+.sea-cat-photo {
+    background: url('../img/sea_cat.jpg') round;
+    width: 100%;
+    height: 160px;
+    position: relative;
+    z-index: -2;
+}
+
+.block-17 h2,
+.block-17 p,
+.block-18 h2,
+.block-18 p,
+.block-19 h2,
+.block-19 p,
+.block-20 h2,
+.block-20 p,
+.block-21 h2,
+.block-21 p,
+.block-22 h2,
+.block-22 p {
+    padding-left: 10px;
+}
+
+.block-17 {
+    box-shadow: -7px -7px 5px green;
+}
+
+.block-18 {
+    box-shadow: 0 0 7px 10px green;
+}
+
+.block-19 {
+    box-shadow: 5px 5px 5px 3px rgb(148, 235, 148);
+}
+
+.block-20 {
+    box-shadow: 0 0 20px 20px rgb(148, 235, 148);
+}
+
+.block-21 {
+    box-shadow: inset 0 7px green, inset 0 -7px orange, inset 7px 0 red, inset -7px 0 blue;
+}
+
+.block-22 {
+    box-shadow: 0 -7px orange, 0 7px green;
+}
+
+.task-4 {
+    margin-top: 150px;
+    height: calc(70vh - 1px);
+}
+
+/* Task - 5 */
+.block-23,
+.block-24,
+.block-25,
+.block-26,
+.block-27 {
+    width: 300px;
+    height: 400px;
+    border: none;
+    justify-content: center;
+    text-align: center;
+    float: left;
+    margin: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.letti-foto {
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 50%;
+    vertical-align: center;
+    margin: auto;
+    float: none;
+}
+
+.block-23 {
+    display: block;
+    background: linear-gradient(to top right, green, yellow, blue, orange);
+}
+
+.block-24 {
+    background-color: white;
+    background-image: linear-gradient(45deg, green 25%, transparent 25%, transparent 74%, orange 75%, blue),
+        linear-gradient(45deg, yellow 25%, transparent 25%, transparent 74%, purple 75%, brown);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+}
+
+.block-25 {
+    background-image: repeating-linear-gradient(to right, green, white 10%, blue 10% 15%, yellow 25%);
+}
+
+/* Не зрозуміло, чому не працюють в парі!!!! */
+.block-26 {
+    background-image: linear-gradient(to top right, green 25%, white 25%, blue 95% 95%),
+        linear-gradient(to top left, yellow 35%, white 35%, orange 95% 95%);
+}
+
+.block-27 {
+    background-image: repeating-linear-gradient(-190deg, red, orange, yellow, green, blue, indigo, violet 31%);
+}
