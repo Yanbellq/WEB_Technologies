@@ -1,0 +1,162 @@
+body {
+    font-family: "Raleway", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+}
+
+.nav {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+
+/* Logo */
+.logo {
+    font-weight: 900;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-left: 100px;
+    padding: 0;
+}
+
+.logo:hover {
+    transition: .2s;
+    color: #2196F3;
+}
+
+.logo>span {
+    font-weight: 900;
+}
+
+.col-blue {
+    color: #2196F3;
+}
+
+
+/* Navigation */
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    margin-right: 100px;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    transition: .2s;
+    color: #2196F3;
+}
+
+.active {
+    color: #2196F3;
+}
+
+
+/* Support */
+.supp-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+    margin-right: 80px;
+    list-style: none;
+}
+
+.supp-link {
+    text-decoration: none;
+    color: black;
+}
+
+.supp-link:hover {
+    transition: .2s;
+    color: #2196F3;
+}
+
+
+/* Main */
+.main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: calc(94vh - 1px);
+    background-color: #2F303A;
+}
+
+.global-info {
+    color: white;
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+
+/* Task - 1 */
+.container {
+    width: 1140px;
+    margin: 100px auto;
+    /* display: grid;
+    justify-content: center;
+    align-items: center; */
+    height: calc(75vh - 1px);
+    position: relative;
+    font-size: 10px;
+}
+
+.container > div {
+    position: absolute;
+    padding: 0;
+    border: #2196F3 solid 2px;
+    width: 150px;
+}
+
+.block-1 {
+    top: 300px;
+    left: 500px;
+    z-index: -1;
+}
+
+.block-2 {
+    top: 370px;
+    left: 400px;
+    border: #2F303A solid 3px;
+    background-color: #000f9f;
+}
+
+.block-3 {
+    top: 220px;
+    left: 600px;
+    border: #2F303A solid 3px;
+    background-color: #000fff;
+}
