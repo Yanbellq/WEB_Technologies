@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+#left-column {
+    width: 50%;
+}
+
+#right-column {
+    width: 50%;
+    padding-left: 20px;
+}
+
+#product-form,
+#search-form {
+    margin-bottom: 20px;
+}
+
+input,
+button {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+#product-list,
+#order-list,
+#all-products-list {
+    margin-top: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+}

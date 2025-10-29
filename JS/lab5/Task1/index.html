@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Control</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>    
+    <div class="container">
+        <h1>Керування Лампою</h1>
+        <div class="lamp-container">
+            <img id="bulb" class="lamp" src="images/default.webp" alt="Лампочка">
+        </div>
+        <div class="controls">
+            <button id="toggleButton">Включити/Виключити</button>
+            <select id="bulbType">
+                <option value="default" selected>Звичайна</option>
+                <option value="energy">Енергозберігаюча</option>
+                <option value="led">Світлодіодна</option>
+            </select>
+            <button id="brightnessButton">Змінити Яскравість</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

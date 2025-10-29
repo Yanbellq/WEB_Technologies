@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Список товарів</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Магазин</h1>
+            <div id="total-cost">Загальна вартість: 0 грн</div>
+        </header>
+
+        <main>
+            <div id="filters"></div>
+            <div id="sorting"></div>
+
+            <section id="product-list-section">
+                <hr width="100%" />
+                <p id="empty-message">Наразі список товарів пустий. Додайте новий товар.</p>
+                <div id="product-list" class="grid"></div>
+                <button id="add-product-btn">Додати новий товар</button>
+            </section>
+        </main>
+
+        <!-- Модальне вікно -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Новий товар</h2>
+                <form id="product-form">
+                    <label>Назва товару:
+                        <input type="text" name="name" placeholder="Назва товару" required>
+                    </label><br>
+                    <label>Ціна (грн):
+                        <input type="number" name="price" placeholder="Ціна товару" required min="0.01" step="0.01">
+                    </label><br>
+                    <label>Категорія:
+                        <input type="text" name="category" placeholder="Категорія товару" required>
+                    </label><br>
+                    <label>URL зображення:
+                        <input type="url" name="image" placeholder="Посилання на зображення (URL)" required pattern="https?://.+">
+                    </label>
+                    <div class="form-actions">
+                        <button type="submit">Зберегти</button>
+                        <button type="button" id="cancel-btn">Скасувати</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Toast -->
+        <div id="toast" class="toast hidden"></div>
+
+        <script src="./js/app.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Дата та час</title>
+    </head>
+    <body>
+        <h1>Дата та час</h1>
+
+        <!-- Цифровий годинник -->
+        <div id="clock">
+            <h2>Цифровий годинник</h2>
+            <p id="digital-clock">00:00:00</p>
+        </div>
+
+        <!-- Таймер зворотного відліку -->
+        <div id="countdown-timer">
+            <h2>Таймер зворотного відліку</h2>
+            <input type="datetime-local" id="countdown-input" />
+            <button id="start-countdown">Запустити таймер</button>
+            <p id="countdown-display">00 днів 00 годин 00 хвилин 00 секунд</p>
+        </div>
+
+        <!-- Календар -->
+        <div id="calendar">
+            <h2>Календар</h2>
+            <input type="month" id="calendar-input" />
+            <div id="calendar-display" class="calendar-display"></div>
+        </div>
+
+        <!-- День народження -->
+        <div id="birthday">
+            <h2>День народження</h2>
+            <input type="date" id="birthday-input" />
+            <button id="calculate-birthday">Розрахувати</button>
+            <p id="birthday-display">
+                Залишилось: 0 місяців, 0 днів, 0 годин, 0 хвилин, 0 секунд
+            </p>
+        </div>
+
+        <script src="./js/app.js"></script>
+    </body>
+</html>
