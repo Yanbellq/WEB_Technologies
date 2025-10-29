@@ -1,0 +1,26 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "target": "es2024",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "types": [
+            "mocha",
+            "chai",
+            "node"
+        ],
+        "strict": true,
+        "noImplicitAny": false,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "test/**/*",
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

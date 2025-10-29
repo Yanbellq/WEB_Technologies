@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Система Управління Бібліотекою</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="bg-gray-100">
+        <div class="container mx-auto px-4 py-8 space-y-8">
+            <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                Система Управління Бібліотекою
+            </h1>
+
+            <div class="max-w-5xl space-y-8 mx-auto">
+                <!-- Додати Книгу -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-700">Додати Книгу</h2>
+                    <form id="bookForm">
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 text-sm font-bold mb-2 hidden"
+                                for="bookTitle"
+                            >
+                                Назва книги
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                                id="bookTitle"
+                                type="text"
+                                placeholder="Назва книги"
+                            />
+                            <p
+                                class="text-red-500 text-xs italic mt-1 hidden"
+                                id="bookTitleError"
+                            ></p>
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 text-sm font-bold mb-2 hidden"
+                                for="bookAuthor"
+                            >
+                                Автор
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                                id="bookAuthor"
+                                type="text"
+                                placeholder="Автор"
+                            />
+                            <p
+                                class="text-red-500 text-xs italic mt-1 hidden"
+                                id="bookAuthorError"
+                            ></p>
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 text-sm font-bold mb-2 hidden"
+                                for="bookYear"
+                            >
+                                Рік видання
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                                id="bookYear"
+                                type="text"
+                                placeholder="Рік видання"
+                            />
+                            <p
+                                class="text-red-500 text-xs italic mt-1 hidden"
+                                id="bookYearError"
+                            ></p>
+                        </div>
+                        <button
+                            class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-50"
+                            type="submit"
+                        >
+                            Додати Книгу
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Додати Користувача -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-700">Додати Користувача</h2>
+                    <form id="userForm">
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 text-sm font-bold mb-2 hidden"
+                                for="userName"
+                            >
+                                Ім'я
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                                id="userName"
+                                type="text"
+                                placeholder="Ім'я"
+                            />
+                            <p
+                                class="text-red-500 text-xs italic mt-1 hidden"
+                                id="userNameError"
+                            ></p>
+                        </div>
+                        <div class="mb-4">
+                            <label
+                                class="block text-gray-700 text-sm font-bold mb-2 hidden"
+                                for="userEmail"
+                            >
+                                Email
+                            </label>
+                            <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                                id="userEmail"
+                                type="email"
+                                placeholder="Email"
+                            />
+                            <p
+                                class="text-red-500 text-xs italic mt-1 hidden"
+                                id="userEmailError"
+                            ></p>
+                        </div>
+                        <button
+                            class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors duration-50"
+                            type="submit"
+                        >
+                            Додати Користувача
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Пошук -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-700">Пошук Книг</h2>
+                    <div class="flex gap-4">
+                        <div
+                            class="shadow appearance-none border rounded flex-1 flex items-center py-2 px-3 text-gray-700 leading-tight"
+                        >
+                            <input
+                                class="flex-1 pr-2 focus:outline-none"
+                                id="searchInput"
+                                type="text"
+                                placeholder="Пошук за назвою або автором"
+                            />
+                            <button
+                                class="ml-auto hover:text-red-600 transition-colors duration-50"
+                                id="clearSearchBtn"
+                            >
+                                <i data-lucide="trash-2" class="h-5 w-5"></i>
+                            </button>
+                        </div>
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline transition-colors duration-50"
+                            id="searchBtn"
+                        >
+                            Пошук
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Список Книг -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-700">Список Книг</h2>
+                    <div id="booksList" class="space-y-3"></div>
+                    <div id="booksPagination" class="flex justify-center gap-2 mt-4"></div>
+                </div>
+
+                <!-- Список Користувачів -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-700">Список Користувачів</h2>
+                    <div id="usersList" class="space-y-3"></div>
+                    <div id="usersPagination" class="flex justify-center gap-2 mt-4"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div
+            id="modal"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+        >
+            <div class="bg-white rounded-lg shadow-xl p-6 max-w-md w-full mx-4">
+                <h3 class="text-lg font-semibold mb-4" id="modalTitle"></h3>
+                <div id="modalContent" class="mb-4"></div>
+                <div id="modalActions" class="flex justify-end gap-3"></div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script>
+            lucide.createIcons();
+        </script>
+        <script src="./dist/bundle.js"></script>
+    </body>
+</html>

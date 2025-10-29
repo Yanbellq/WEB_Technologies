@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "es6",
+        "removeComments": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "sourceMap": true
+    },
+    "include": ["src/**/*", "test/**/*"],
+    "exclude": ["node_modules"]
+}
